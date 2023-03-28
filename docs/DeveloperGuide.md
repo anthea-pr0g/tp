@@ -4,20 +4,85 @@
 
 {list here sources of all reused/adapted ideas, code, documentation, and third-party libraries -- include links to the original source as well}
 
-## Design & implementation
 
-{Describe the design and implementation of the product. Use UML diagrams and short code snippets where applicable.}
+## Architecture
 
+---
+
+The Diagram below shows an overview of how components are linked together to produce Modganiser.
+
+{image}
+
+Main components of the architecture
+`Duke` has a class called `Duke`.
+
+* It starts the app up at the beginning and passes the relevant inputs to the `Parser` to be parsed.
+* It saves the name of the user for future uses.
+* It ends the program when called to.
+
+Modganiser consists of :
+
+1. `Storage`
+2. `Parser`
+3. `ModuleList`
+4. `Print`
+
+**How the components interact with each other**
+
+When using the command `add /CS2113T /4 /CORE /1 /1` ,
+The Sequence Diagram shows how the components interact with each other: 
+
+{image}
+
+### **Storage Component**
+
+Firstly, the {explain workflow}
+
+{uses}
+*  It can save the name of the user into a file.
+* The program can load data from the file when Modganiser starts up again.
+* It can save changes to the file after each change such as an addition or deletion. 
+This is done by using the methods 
+
+
+### **Parser Component**
+
+Firstly, the {explain workflow}
+
+{uses}
+* It calls the relevant methods according to the user input 
+
+
+### **ModuleList Component**
+
+Firstly, the {explain workflow}
+
+{uses}
+*
+
+### **Print Component**
+
+
+Firstly, the {explain workflow}
+
+{uses}
+*
+
+
+
+## Design & implementations
+
+---
 ### Proposed Implementation : **Manpage**
 
 The Manpage is a class that is used to display parts of the manpage that is requested by the user.
 It has multiple methods for separate features.
 
 The sequence by which the ManPage class handles the `man` command is as follows:
-1) The `Parser` class extracts the other fields of the user input, and calls upon the `checkUserInput()` method
-   which calls upon the `checkManPageInput()`.
+1) The `Parser` class extracts the other fields of the user input, and calls upon the `checkUserInput()` method, 
+if the command is not `man`, it will additionally call upon the `checkManPageInput()`.
 
-2) The method then uses the methods in the ManPage class to print out the requested feature.
+2) It then uses the respective methods in the ManPage class to print out the requested feature.
 
 `Manpage#printManPage()` - Prints the Command Summary.
 
@@ -208,10 +273,10 @@ traditional GUI apps.
 
 ## User Stories
 
-|Version| As a ... | I want to ... | So that I can ...|
-|--------|----------|---------------|------------------|
-|v1.0|new user|see usage instructions|refer to them when I forget how to use the application|
-|v2.0|user|find a to-do item by name|locate a to-do without having to go through the entire list|
+| Version | As a ... | I want to ...             | So that I can ...                                           |
+|---------|----------|---------------------------|-------------------------------------------------------------|
+| v1.0    | new user | see usage instructions    | refer to them when I forget how to use the application      |
+| v2.0    | user     | find a to-do item by name | locate a to-do without having to go through the entire list |
 
 ## Non-Functional Requirements
 

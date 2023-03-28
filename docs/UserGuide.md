@@ -51,7 +51,6 @@ Should you have any feedback or enquiries, please do not hesitate to reach out t
 
 **<p style = "text-align:right"><small>[Return to Top](#table-of-contents)</small></p>**
 
----
 
 <div style="page-break-after: always;"></div>
 
@@ -145,6 +144,7 @@ To set up Modganiser, please follow the steps below:
 ---
 
 <div style="page-break-after: always;"></div>
+
 
 ## 4. Features
 
