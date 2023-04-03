@@ -61,6 +61,7 @@ requirements (Core/UE/GE/Internships).
    Links to PRs reviewed, instances of helping team members in other ways.
    [#233](https://github.com/AY2223S2-CS2113T-T09-4/tp/pull/233)
    [#167](https://github.com/AY2223S2-CS2113T-T09-4/tp/pull/167)
+
 8. **Contributions beyond the project team:**
 
    Evidence of helping others e.g. responses you posted in our forum, bugs you reported in other team's products,
