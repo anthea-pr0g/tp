@@ -22,8 +22,10 @@ requirements (Core/UE/GE/Internships).
 
    * ManPage class - constantly needing to update it as the features change
    and split the features up so the manpage is easier to look at
-   * Method in Parser to check User Input before it uses its respective
-   ManPage methods
+   * Method in InputChecker (checkManPageInput()) to check User's Input is valid 
+   for the manpage command before it uses its respective ManPage methods
+   * Method in Command (manPageCommand()) to ensure the appropriate number of fields are used 
+   and a valid user input is used
    * A new type of module that handles Internships such as ATAP and SIP
    * Exceptions for ManPage Inputs
    * Exceptions to accept only 0-6 ,8 ,12 mcs
@@ -31,10 +33,12 @@ requirements (Core/UE/GE/Internships).
    * Bye command
    * JavaDoc
 
+
 3. **Contributions to the UG:**
 
    * Manpage feature description/ command usage
    * Command summary table
+
 
 4. **Contributions to the DG:** 
 
@@ -44,10 +48,12 @@ requirements (Core/UE/GE/Internships).
    * Module component
    * Manpage component implementation
 
+
 5. **UML Diagrams I added:**
    * Module component interface diagram 
    * Architecture component sequence diagram 
    * Manpage class sequence diagram
+
 
 6. **Contributions to team-based tasks**
    * Logging
@@ -56,17 +62,25 @@ requirements (Core/UE/GE/Internships).
    * Released v1.0 jar in week 9
    * Issues tagged to versions 
 
+
 7. **Review/mentoring contributions:**
    
-   Links to PRs reviewed, instances of helping team members in other ways.
+   Links to PRs reviewed:
    [#233](https://github.com/AY2223S2-CS2113T-T09-4/tp/pull/233)
    [#167](https://github.com/AY2223S2-CS2113T-T09-4/tp/pull/167)
+   
+   Added the return to Table of contents link for everyone's component in the DG
+   Cleaned up inconsistencies as I see them
+
+
 8. **Contributions beyond the project team:**
 
-   Evidence of helping others e.g. responses you posted in our forum, bugs you reported in other team's products,
-   Evidence of technical leadership e.g. sharing useful information in the forum
-   Keep in mind that evaluators will use the PPP to estimate your project effort. We recommend that you mention things that will earn you a fair score e.g., explain how deep the enhancement is, why it is complete, how hard it was to implement etc.
-   Had to learn how to use Plant UML for sequence and architecture diagrams
+   * Peer reviewed User guides and Developer guides for team [rainyDay](https://github.com/AY2223S2-CS2113T-T09-1/tp) 
+   and team [MoneyGoWhere](https://github.com/AY2223S2-CS2113T-T09-2/tp).
+   * Reported 21 Bugs for Practical Dry Run.
+   * Learnt Plant UML for sequence, class and architecture diagrams.
+   * It was hard to keep track of changes made to each feature
+   and to make these changes were also applied to the manual page.
 
 ### DG extracts
 
