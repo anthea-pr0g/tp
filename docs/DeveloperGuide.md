@@ -9,45 +9,45 @@ Modganiser is a platform that provides **effortless module planning, at your fin
 ## Table of Contents
 
 ---
-
-[Introduction](#introduction)
-
-[Table of contents](#table-of-contents) 
-0. [Acknowledgements](#acknowledgements)
-1. [Setting Up](#setting-up)
-2. [Architecture](#architecture)
-   + 2.1. [Storage](#1-storage-component)
-   + 2.2. [Parser](#2-parser-component)
-   + 2.3. [ModuleList](#3-modulelist-component)
-   + 2.4. [Print](#4-print-component)
-   + 2.5. [Module](#5-module-component)
-3. [Design and Implementation](#3-design-and-implementation)
-   + 3.1. [ManPage](#31-manpage)
-   + 3.2. [Parser](#32-parser)
-   + 3.3. [Add Modules](#33-add-modules)
-   + 3.4. [Find Modules](#34-find-modules)
-   + 3.5. [Delete Modules](#35-delete-modules)
-   + 3.6. [Edit Modules](#36-edit-modules)
-   + 3.7. [Add or Update Grade](#37-add-or-update-grade)
-   + 3.8. [Calculate CAP](#38-calculate-cap)
-4. [Appendix: Requirements](#appendix--requirements)
-   + 4.1. [Product Scope](#product-scope)
-   + 4.2. [User Stories](#user-stories)
-   + 4.3. [Use Cases](#use-cases)
-   + 4.4. [Non-Functional Requirements](#non-functional-requirements)
-   + 4.5. [Glossary](#glossary)
-5. [Appendix: Instructions for manual testing](#appendix--instructions-for-manual-testing)
+1. [Acknowledgements](#acknowledgements)
+2. [Setting Up](#setting-up)
+3. [Architecture](#architecture)
+   + 3.1. [Storage](#1-storage-component)
+   + 3.2. [Parser](#2-parser-component)
+   + 3.3. [ModuleList](#3-modulelist-component)
+   + 3.4. [Print](#4-print-component)
+   + 3.5. [Module](#5-module-component)
+4. [Design and Implementation](#design-and-implementation)
+   + 4.1. [ManPage](#manpage)
+   + 4.2. [Parser](#parser)
+   + 4.3. [Add Modules](#add-modules)
+   + 4.4. [Find Modules](#find-modules)
+   + 4.5. [Delete Modules](#delete-modules)
+   + 4.6. [Edit Modules](#edit-modules)
+   + 4.7. [Add or Update Grade](#add-or-update-grade)
+   + 4.8. [Calculate CAP](#calculate-cap)
+5. [Appendix: Requirements](#appendix--requirements)
+   + 5.1. [Product Scope](#product-scope)
+   + 5.2. [User Stories](#user-stories)
+   + 5.3. [Use Cases](#use-cases)
+   + 5.4. [Non-Functional Requirements](#non-functional-requirements)
+   + 5.5. [Glossary](#glossary)
+6. [Appendix: Instructions for manual testing](#appendix--instructions-for-manual-testing)
 
 
 ## Introduction 
 
+---
 
 ## Acknowledgements
+
+---
 
 {list here sources of all reused/adapted ideas, code, documentation, and third-party libraries -- include links to the original source as well}
 
 ## Setting Up
 
+---
 > ❗ **Warning** : Follow the steps in the following guide precisely. Things will not work out if you deviate in some steps. 
 
 First, fork [Modganiser's repo](https://github.com/AY2223S2-CS2113T-T09-4/tp), and clone the fork into your computer.
@@ -89,6 +89,8 @@ to ensure Intellij IDEA is configured to use JDK 11.
    When you are ready to start coding, we recommend that you get some sense of the overall design by 
    reading about Modganiser's architecture.
 
+
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
 ## Architecture
 
@@ -138,6 +140,7 @@ The `Storage` class,
 modules
 * can read saved data from the text file back into corresponding objects
 
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
 ### 2. **Parser Component**
 How the `Parser` component works:
@@ -157,6 +160,8 @@ to the user.
 
 ![Parser Diagram](diagrams/Parser.png)
 ![Parser Class Diagram](diagrams/ParserClass.png)
+
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
 ### 3. **ModuleList Component**
 
@@ -188,6 +193,8 @@ How the `ModuleList` component works:
 
 ![ModuleList Diagram](diagrams/ModuleList.png)
 
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
+
 ### 4. **Print Component**
 
 When the `Print` component is called, it helps to print messages to the User Interface (UI) to allow for interaction with the user. 
@@ -197,7 +204,7 @@ The `Print` component,
 * contains many methods where each method represents a single type of response to a specific type of user input.
 * executes the relevant method to print a message when called in other components.
 
-
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
 ### 5. **Module Component**
 
@@ -215,11 +222,13 @@ more with the `Module` component to create, update and retrieve any of the 5 att
 
 ![Module Diagram](diagrams/ModuleClass.png)
 
-## 3. Design and Implementation
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
+
+## Design and Implementation
 
 ---
 
-### 3.1. ManPage 
+### ManPage 
 
 The ManPage is a class that is used to display parts of the manual page that is requested by the user.
 It has multiple methods for separate features.
@@ -257,7 +266,9 @@ Pros: Avoid extra step of typing another command to understand a feature well.
 Cons: Wordy and long manual page when command is man, user has to scroll through
 a long manual page to find what they need. Long method.
 
-### 3.2. Parser
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
+
+### Parser
 
 The `Parser` is a class that handles the commands keyed in by the user.  
 It has multiple checks to ensure that the user keys in valid commands. 
@@ -265,7 +276,9 @@ It has multiple checks to ensure that the user keys in valid commands.
 <!---elaborate more on the class, still unsure of the format...--->
 <!---insert other commands here, still unsure of the format...(should it all be under Parser class or separate?)--->
 
-### 3.3. Add Modules
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
+
+### Add Modules
 
 `add` command:
 
@@ -286,8 +299,9 @@ The sequence of events above can be represented with the following sequence diag
 
 ![addInputCommand](diagrams/AddInputCommand.png)
 
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
-### 3.4. Find Modules
+### Find Modules
 
 The find modules features is facilitated by the `Command`, `ModuleList` and `Module` Classes. `Command` helps to check
 for user input to determine is user doing a search via a module name or module type, which will then invoke the 
@@ -315,8 +329,9 @@ The following sequence diagram shows how the `findModuleByCode` operation works:
 
 ![FindModule](diagrams/FindModule.png)
 
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
-### 3.5. Delete Modules
+### Delete Modules
 
 `delete` command:
 
@@ -337,8 +352,9 @@ The following sequence diagram shows how the `deleteCommand` operation works:
 
 ![deleteModule](diagrams/DeleteModule.png)
 
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
-### 3.6. Edit Modules
+### Edit Modules
 
 `edit` command:
 
@@ -392,7 +408,10 @@ by the user. The `getModuleType()`, `getModularCredits()`, `getYear()`, `getSeme
 methods in the `Module` class are also called upon to obtain the respective fields required to create the new
 `Module` object.
 
-### 3.7. Add or Update Grade
+
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
+
+### Add or Update Grade
 
 `grade` command:
 
@@ -412,9 +431,9 @@ The sequence of events above can be represented with the following sequence diag
 
 ![gradeCommand](diagrams/GradeCommand.png)
 
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
-
-### 3.8. Calculate CAP
+### Calculate CAP
 
 `calculateCAP` command:
 
@@ -435,9 +454,12 @@ The sequence of events above can be represented with the following sequence diag
 
 ![calculateCAP](diagrams/CalculateCAP.png)
 
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
+
+
+## Documentation, logging and testing
 
 ---
-## Documentation, logging and testing
 
 ### Documentation
 **Setting up and maintaining the project website:**
@@ -454,10 +476,16 @@ The sequence of events above can be represented with the following sequence diag
 
 * See the [_[se-edu/guides] **Using PlantUML**_](https://se-education.org/guides/tutorials/plantUml.html)
 
+
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
+
 ### Logging
+
 * We are using `java.util.logging` package for logging.
 * The logger is initialised in the `Main` class.
 * Logging information and log messages are written into a `modganiserLog` text file.
+
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
 ### Testing
 #### Running tests
@@ -474,6 +502,8 @@ There are two ways to run tests.
 <div markdown="span" class="alert alert-secondary">:link: **Link**: Read [this Gradle Tutorial from the se-edu/guides](https://se-education.org/guides/tutorials/gradle.html) to learn more about using Gradle.
 </div>
 
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
+
 --------------------------------------------------------------------------------------------------------------------
 
 #### Types of tests
@@ -484,6 +514,8 @@ This project has two types of tests:
    e.g. `seedu.main.ModuleListTest`
 2. *Print Tests* that are checking multiple outputs to the program.
    e.g. `seedu.main.PrintTest`
+
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
 ## Appendix: Requirements
 
@@ -501,6 +533,7 @@ This project has two types of tests:
 Better organisation of modules across 4 years in NUS and allow for more convenient planning as 
 compared to when using other applications
 
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
 ### User Stories
 
@@ -520,6 +553,8 @@ compared to when using other applications
 | Medium   | Current user | Find a module by its code                          | Locate a specific module without having to go through the entire list of modules       |
 | Medium   | Current user | Find a module by its type                          | Locate all modules in a specific category without having to go through the entire list |
 | Low      | Current user | Sort modules by their module codes when listed out | Find similarly coded modules easily                                                    |
+
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
 ### Use Cases
 
@@ -569,6 +604,8 @@ For all use cases below, the **System** is `Modganiser` and the **Actor** is the
      Use case resumes at step 2.
 
 
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
+
 ### Non-Functional Requirements
 
 1. Should work on any mainstream OS as long as it has Java 11 or above installed
@@ -580,6 +617,8 @@ For all use cases below, the **System** is `Modganiser` and the **Actor** is the
 6. A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be 
    able to accomplish most of the tasks faster using commands than using the mouse.
 
+
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
 ### Glossary
 
@@ -681,4 +720,5 @@ Below are some instructions to test the application manually.
       Expected: Shows the welcome message and prompts the user for his/her name. `list /all` command shows that the
       list of modules is now empty.
 
+**Returning back to Table of Contents: [Table of contents](#table-of-contents)**
 
